@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo04</title>
+  <script src="../build/react.js"></script>
+  <script src="../build/react-dom.js"></script>
+  <script src="../build/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+   function Comment(props) {
+     return (
+       <div className ="Comment">
+         <UserInfo user = {props.author}/>
+         <div className = "Comment-text">{props.text}</div>
+         <div className = "Comment-date">{formatDate(props.date)}</div>
+       </div>
+     );
+   }
+  function Avator(props) {
+     return (
+       <img className = "Avator"
+            src="{props.user.avatarUrl}"
+            alt="{props.user.name}"
+       />
+     );
+  }
+  function UserInfo(props) {
+    return (
+      <div className = "UserInfo">
+        <Avator user = {props.user} />
+        <div className = "UserInfo-name">{props.user.name}</div>
+      </div>
+    );
+  }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

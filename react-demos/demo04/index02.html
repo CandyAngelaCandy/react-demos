@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo04</title>
+  <script src="../build/react.js"></script>
+  <script src="../build/react-dom.js"></script>
+  <script src="../build/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+  function Welcome(props) {
+    return <h1>Hello,{props.name}</h1>;
+  }
+  function App() {
+    return <div>
+      <Welcome name="Andy"/>
+      <Welcome name="Bob"/>
+      <Welcome name="Cindy"/>
+    </div>;
+  }
+  const element = <App />;
+  ReactDOM.render(
+    element,
+    document.getElementById("example")
+  );
+</script>
+</body>
+</html>
